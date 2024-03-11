@@ -1,11 +1,13 @@
 
+import { useState } from 'react';
 import './App.css';
 
 function App() {
-  console.log('hello');
+  const [darkTheme, setDarkTheme] = useState(false);
+
   return (
-    <div>
-      
+    <div className={darkTheme? 'darkmode' : 'lightmode'}>
+      <p className='text-5xl darkmode:bg-gray-900'>App</p>
     </div>
   );
 }
