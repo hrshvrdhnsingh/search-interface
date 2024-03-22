@@ -1,7 +1,6 @@
 import React from "react";
 
 const News = ({ results }) => {
-  console.log(results);
   return (
     <div className="flex mt-2 justify-center min-h-screen w-screen mb-36">
       <div className="flex justify-center w-7/12 h-full flex-col gap-6 p-1 inner-news-div">
