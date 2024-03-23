@@ -344,4 +344,7 @@ body {
     margin-left: 60vw;
     margin-bottom: 16vh;
   }
+  .nothing-error{
+    font-size: 20px;
+  }
 }

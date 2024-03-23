@@ -43,22 +43,22 @@ const Result = () => {
     }
 
     case "/search": {
-      if(results && results.length===0) return (<div className='text-3xl text-lime-400 text-center mt-6'>Nothing to show yet !!!</div>)
+      if(results && results.length===0) return (<div className='text-3xl text-lime-400 text-center mt-6 nothing-error'>Nothing to show yet !!!</div>)
       return <Search results={results}/>;
     }
 
     case "/images": {
-      if(imageResults && imageResults.length===0) return (<div className='text-3xl text-lime-400 text-center mt-6'>Nothing to show yet !!!</div>)
+      if(imageResults && imageResults.length===0) return (<div className='text-3xl text-lime-400 text-center mt-6 nothing-error'>Nothing to show yet !!!</div>)
       return <Images results={imageResults}/>;
     }
     
     case "/news": {
-      if(newsResults && newsResults.length===0) return (<div className='text-3xl text-lime-400 text-center mt-6'>Nothing to show yet !!!</div>)
+      if(newsResults && newsResults.length===0) return (<div className='text-3xl text-lime-400 text-center mt-6 nothing-error'>Nothing to show yet !!!</div>)
       return <News results={newsResults}/>;
     }
 
     case "/videos": {
-      if(videoResults && videoResults.length===0) return (<div className='text-3xl text-lime-400 text-center mt-6'>Nothing to show yet !!!</div>)
+      if(videoResults && videoResults.length===0) return (<div className='text-3xl text-lime-400 text-center mt-6 nothing-error'>Nothing to show yet !!!</div>)
       return <Video results={videoResults}/>;
     }
 
