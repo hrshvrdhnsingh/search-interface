@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
       <div className='navigator-div text-gray-900 flex flex-col justify-center align-center font-bold'>
         <p className='dissapear'>Use the Gemini v1.5 pro</p>
-        <Link to='/'><NavigatorButton /></Link>
+        <Link to='https://gemini-hvs.vercel.app/'><NavigatorButton /></Link>
       </div>
     </div>
   )
