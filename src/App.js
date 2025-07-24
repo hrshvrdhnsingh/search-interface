@@ -10,6 +10,14 @@ import NavigatorButton from './components/NavigatorButton';
 function App() {
   //const [darkTheme, setDarkTheme] = useState(false);
 
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', 'G-NLK4FS4CC0', {
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
+
   return (
     <div className='flex justify-between flex-col w-screen'>
       <Navbar />
