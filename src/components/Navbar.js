@@ -21,7 +21,7 @@ const Navbar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setInputValue(e.target.value);
+    // setInputValue(e.target.value);
     setSearchTerm(inputValue);
   };
 

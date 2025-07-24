@@ -2,8 +2,8 @@ import React from 'react'
 
 const Images = ({results}) => {
   return (
-    <div className='flex justify-center min-h-screen w-screen mb-36 outer-image-div' >
-      <div className='flex justify-center w-10/12 h-full gap-5 p-1 flex-wrap inner-image-div'>
+    <div className='flex flex-col justify-center min-h-screen w-screen mb-36 outer-image-div' >
+      <div className='flex justify-center w-full h-full gap-5 p-1 flex-wrap inner-image-div'>
         {
           results && results.length > 0 ? results.map((imagepost, index) => (
             <div className='image-result-container flex flex-col p-2 justify-center' key={index} onClick={()=> window.open(imagepost.image.contextLink, '_blank')}>
