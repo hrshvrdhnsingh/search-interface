@@ -7,18 +7,13 @@ import NavigatorButton from './NavigatorButton';
 
 const Footer = () => {
   const handleChatClick = (e) => {
-    e.preventDefault()
-    const url = 'https://gemini-hvs.vercel.app/'
     if (window.gtag) {
       window.gtag('event', 'click_ai_chat', {
         event_category: 'engagement',
         event_label: 'AI Chat Launch Button',
         transport_type: 'beacon',
-        page_location: window.location.href,
-        event_callback: () => window.open(url, '_blank')
-      })
-    } else {
-      window.open(url, '_blank')
+        page_location: window.location.href
+      });
     }
   };
 
