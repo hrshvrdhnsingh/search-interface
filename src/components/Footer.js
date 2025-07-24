@@ -6,13 +6,19 @@ import { Link } from 'react-router-dom';
 import NavigatorButton from './NavigatorButton';
 
 const Footer = () => {
-  const handleChatClick = () => {
+  const handleChatClick = (e) => {
+    e.preventDefault()
+    const url = 'https://gemini-hvs.vercel.app/'
     if (window.gtag) {
       window.gtag('event', 'click_ai_chat', {
         event_category: 'engagement',
         event_label: 'AI Chat Launch Button',
-        transport_type: 'beacon'
-      });
+        transport_type: 'beacon',
+        page_location: window.location.href,
+        event_callback: () => window.open(url, '_blank')
+      })
+    } else {
+      window.open(url, '_blank')
     }
   };
 
@@ -25,8 +31,8 @@ const Footer = () => {
       </div>
       <div className='navigator-div text-gray-900 flex flex-col justify-center align-center font-bold'>
         <p className='dissapear'>Use the Gemini v1.5 pro</p>
-        <Link to='https://gemini-hvs.vercel.app/' target="_blank"
-          onClick={handleChatClick}><NavigatorButton /></Link>
+        <a href='https://gemini-hvs.vercel.app/'
+          onClick={handleChatClick}><NavigatorButton /></a>
       </div>
     </div>
   )

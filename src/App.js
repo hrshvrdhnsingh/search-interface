@@ -1,18 +1,19 @@
 /* eslint-disable no-unused-vars */
 import './App.css';
 import Navbar from './components/Navbar';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Result from './components/Result';
 import NavigatorButton from './components/NavigatorButton';
+import { useEffect } from 'react';
 
 function App() {
   //const [darkTheme, setDarkTheme] = useState(false);
-
+  const location = useLocation();
   useEffect(() => {
     if (window.gtag) {
-      window.gtag('config', 'G-NLK4FS4CC0', {
+      window.gtag('config', 'G-H2XL40YYN5', {
         page_path: location.pathname + location.search,
       });
     }
